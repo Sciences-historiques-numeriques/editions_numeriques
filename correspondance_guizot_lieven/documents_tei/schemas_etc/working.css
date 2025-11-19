@@ -16,7 +16,7 @@ title {
 }
 
 title:after {
-    content: "-----" ;
+    content: "-----\a Edition" ;
     display: block;
 }
 
@@ -26,7 +26,7 @@ publicationStmt {
 
 
 publicationStmt:after {
-    content:"\a\a";
+    content:"\a";
     white-space: pre;
 }        
 
@@ -37,11 +37,14 @@ publisher::after {
 }
 
 sourceDesc::before {
-    content: "---- \n Source: ";
+    content: "---- \a\a Source";
     display: inline;
 }
 
 
+profileDesc {
+    display: none;
+}
 
 
 name {
@@ -66,4 +69,9 @@ name[ana="person"] {
   width: 10px;
   padding: 6px;
   background-color: rgb(230, 179, 154);
+}
+
+idno {
+    color:dodgerblue;
+    display: block;
 }

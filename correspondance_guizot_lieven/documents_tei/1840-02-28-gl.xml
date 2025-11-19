@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="schemas_etc/working.css" type="text/css"?>
-<?xml-model href="schemas_etc/tei_lite/document.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<?xml-model href="schemas_etc/tei_lite_customized" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -30,97 +30,20 @@
       <profileDesc>
          <particDesc>            
             <listPerson>
-               <person corresp="isni:0000000122780157">
+               <person xml:id="ddl">
                   <persName>
-                     <forename>Marie
-                     </forename>
+                     <forename>Dorothée</forename>
                      <nameLink>de
                      </nameLink>
-                     <surname>Rabutin-Chantal
+                     <surname>Lieven
                      </surname>
-                     <roleName>marquise
-                     </roleName>
-                     <nameLink>de
-                     </nameLink>
-                     <placeName>Sévigné
-                     </placeName>
-                  </persName>
-                  <birth>
-                     <placeName>Paris
-                     </placeName>
-                     <date when="1626-02-05">5 février 1626
-                     </date>
-                  </birth>
-                  <death>
-                     <placeName>Grignan
-                     </placeName>
-                     <date when="1696-04-17">17 avril 1696
-                     </date>
-                  </death>
-                  <residence>
-                     <placeName ref="geonames:2988507">Paris
-                     </placeName>
-                     <placeName ref="geonames:2999754">Les Rochers
-                     </placeName>
-                  </residence>
-               </person>
-               <person xml:id="jarie">
-                  <persName>
-                     <forename>Louis
-                     </forename>
-                     <roleName>de
-                     </roleName>
-                     <surname>La Jarie
-                     </surname>
-                  </persName>
-                  <occupation>fermier
-                  </occupation>
-               </person>
-               <person xml:id="herigoyen">
-                  <persName>
-                     <forename>Jean
-                     </forename>
-                     <roleName>d'
-                     </roleName>
-                     <surname>Hérigoyen
-                     </surname>
-                  </persName>
-                  <occupation>fermier
-                  </occupation>
-               </person>
-               <person xml:id="harouys">
-                  <persName>
-                     <forename>Guillaume
-                     </forename>
-                     <roleName>de
-                     </roleName>
-                     <surname>Harouys
-                     </surname>
-                     <roleName>seigneur
-                     </roleName>
-                     <nameLink>de
-                     </nameLink>
-                     <placeName>La Seilleraye
-                     </placeName>
-                  </persName>
-                  <birth>
-                     <date when="1611">1611
-                     </date>
-                  </birth>
-                  <death>
-                     <date when="1699">1699
-                     </date>
-                  </death>
-                  <occupation>chevalier, trésorier des États de Bretagne
-                  </occupation>
-                  <residence>Carquefou
-                  </residence>
+                  </persName> 
                </person>
             </listPerson>
          </particDesc>
          <settingDesc>
             <listPlace>
-               <place corresp="geonames:2988507">
+               <place >
                   <placeName>Paris
                   </placeName>
                   <country>France
@@ -130,39 +53,20 @@
                      </geo>
                   </location>
                </place>
-               <place corresp="geonames:2999754">
-                  <placeName>Château des Rochers
-                  </placeName>
-                  <settlement>Vitré
-                  </settlement>
-                  <region>Bretagne
-                  </region>
-                  <country>France
-                  </country>
-                  <location>
-                     <geo>48.081430, -1.166975
-                     </geo>
-                  </location>
-               </place>
             </listPlace>
          </settingDesc>
          <correspDesc>
             <correspAction type="sent">
-               <persName ref="isni:0000000122780157">Madame de Sévigné
-               </persName>
-               <placeName ref="geonames:2988507">Paris
-               </placeName>
-               <date when="1686-07-20">20 juillet 1686
-               </date>
+               <persName>François Guizot</persName>
+               <placeName >Paris</placeName>
+               <date when="1840-02-28">28 février 1840 </date>
             </correspAction>
             <correspAction type="received">
-               <persName ref="#herigoyen">M. d'Herigoyen
+               <persName>Dorothée de Lieven
                </persName>
             </correspAction>
          </correspDesc>
       </profileDesc>
-      
-         
    </teiHeader>
    <text>
       <body>
@@ -171,7 +75,7 @@
             <opener>
                <idno type="id_number">317</idno>
                <dateline>
-                  <name>Londres </name> Vendredi <date when="1840-02-02">28 février 1840 </date>, 9
+                  <name type="place">Londres </name> Vendredi <date when="1840-02-28">28 février 1840 </date>, 9
             heures </dateline>
             </opener>
 
@@ -193,7 +97,7 @@
             <p>Hertford-House est très beau, le rez-de-chaussée surtout. Le
             premier étage est mal meublé. J’y suis établi dans une bonne chambre sur la cour, au
             dessus du salon qui précède mon cabinet du rez-de-chaussée et dont on a fait une petite
-            salle à manger. J’ai bien dormi. Mais la maison est vide, la ville est vide, le pays est
+            salle à manger. J’ai bien dormi. Mais la maison <pb/>est vide, la ville est vide, le pays est
             vide. Rien ne les remplira.</p>
 
             <p>Je verrai lord Palmerston chez lui à Carlton-Terrace,
@@ -203,15 +107,17 @@
             elle et le chancelier de l’ambassade que j’avais avec moi, me l’a nommée à l’instant.
             J’irai demain soir à son samedi.</p> 
             <p>2 heures et demie</p> 
-            Je viens de chez Lord Palmerston.
-            La Reine me recevra, à ce qu’il paraît, demain. Point de discours. M. de Talleyrand en a
+            <p>Je viens de chez Lord Palmerston. La Reine me recevra, à ce qu’il paraît, demain. Point de discours. M. de Talleyrand en a
             fait un. Le général Sébastiani point. On aime mieux que je n’en fasse point. On m’a très
             bien reçu. J’ai été de la chez lord Landsdowne et lord Melbourne que je n‘ai pas
-            trouvés. Les bals de la Reine vont commencer. Lundi prochain, une petite soirée
+            trouvés.</p> 
+            <p>Les bals de la Reine vont commencer. Lundi prochain, une petite soirée
             dansante. Le Prince Albert a décidément du succès. La Reine a été très bien reçue, il y
-            a trois jours à Drury lane. M. de Bülow arrive demain. Ellice est venu en mon absence.
-            J’y ai regret. Alava m’a écrit de grand matin, désolé de ne pouvoir venir à la place de
-            son billet. Il est cloué dans son fauteuil par un lumbago. Je viens de parcourir tout le
+            a trois jours à Drury lane. </p>
+            <p>M. de Bülow arrive demain.</p>
+            <p>Ellice est venu en mon absence.
+            J’y ai regret. Alava <pb/>m’a écrit de grand matin, désolé de ne pouvoir venir à la place de
+            son billet. Il est cloué dans son fauteuil par un lumbago.</p> Je viens de parcourir tout le
             beau quartier. Tout est petit et l’ensemble est grand, très grand. Une chose me choque,
             c’est la manie des ornements dans toutes ces petites maisons. Je n’ai vu nulle part tant
             de colonnes, de colonnettes, de figurines, d’enjolivement de toute espèce. Ce qui est
