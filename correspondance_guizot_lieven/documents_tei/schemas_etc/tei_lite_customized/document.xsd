@@ -2,7 +2,7 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
   <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
   <!--
-    Schema generated from ODD source 2025-11-19T17:01:42Z. August 2012. 
+    Schema generated from ODD source 2025-11-19T20:43:19Z. August 2012. 
     TEI Edition: P5 Version 4.10.2. Last updated on 4th September 2025, revision bcfa98f42 
     TEI Edition Location: https://www.tei-c.org/Vault/P5/4.10.2/ 
     
@@ -2686,6 +2686,72 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
       <xs:element ref="tei:person"/>
     </xs:choice>
   </xs:group>
+  <xs:group name="tei_model.placeNamePart">
+    <xs:choice>
+      <xs:element ref="tei:placeName"/>
+      <xs:element ref="tei:country"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="tei_model.placeNamePart_alternation">
+    <xs:choice>
+      <xs:element ref="tei:placeName"/>
+      <xs:element ref="tei:country"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="tei_model.placeNamePart_sequence">
+    <xs:sequence>
+      <xs:element ref="tei:placeName"/>
+      <xs:element ref="tei:country"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="tei_model.placeNamePart_sequenceOptional">
+    <xs:sequence>
+      <xs:element minOccurs="0" ref="tei:placeName"/>
+      <xs:element minOccurs="0" ref="tei:country"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="tei_model.placeNamePart_sequenceOptionalRepeatable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:placeName"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:country"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="tei_model.placeNamePart_sequenceRepeatable">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" ref="tei:placeName"/>
+      <xs:element maxOccurs="unbounded" ref="tei:country"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="tei_model.placeStateLike">
+    <xs:sequence>
+      <xs:group ref="tei:tei_model.placeNamePart"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="tei_model.placeStateLike_alternation">
+    <xs:sequence>
+      <xs:group ref="tei:tei_model.placeNamePart_alternation"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="tei_model.placeStateLike_sequence">
+    <xs:sequence>
+      <xs:group ref="tei:tei_model.placeNamePart_sequence"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="tei_model.placeStateLike_sequenceOptional">
+    <xs:sequence>
+      <xs:group minOccurs="0" ref="tei:tei_model.placeNamePart_sequenceOptional"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="tei_model.placeStateLike_sequenceOptionalRepeatable">
+    <xs:sequence>
+      <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.placeNamePart_sequenceOptionalRepeatable"/>
+    </xs:sequence>
+  </xs:group>
+  <xs:group name="tei_model.placeStateLike_sequenceRepeatable">
+    <xs:sequence>
+      <xs:group maxOccurs="unbounded" ref="tei:tei_model.placeNamePart_sequenceRepeatable"/>
+    </xs:sequence>
+  </xs:group>
   <xs:group name="tei_model.orgPart">
     <xs:choice>
       <xs:element ref="tei:listOrg"/>
@@ -2911,6 +2977,7 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
   <xs:group name="tei_model.nameLike">
     <xs:choice>
       <xs:group ref="tei:tei_model.nameLike.agent"/>
+      <xs:group ref="tei:tei_model.placeStateLike"/>
       <xs:element ref="tei:rs"/>
       <xs:element ref="tei:idno"/>
       <xs:group ref="tei:tei_model.persNamePart"/>
@@ -2919,6 +2986,7 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
   <xs:group name="tei_model.nameLike_alternation">
     <xs:choice>
       <xs:group ref="tei:tei_model.nameLike.agent_alternation"/>
+      <xs:group ref="tei:tei_model.placeStateLike_alternation"/>
       <xs:element ref="tei:rs"/>
       <xs:element ref="tei:idno"/>
       <xs:group ref="tei:tei_model.persNamePart_alternation"/>
@@ -2927,6 +2995,7 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
   <xs:group name="tei_model.nameLike_sequence">
     <xs:sequence>
       <xs:group ref="tei:tei_model.nameLike.agent_sequence"/>
+      <xs:group ref="tei:tei_model.placeStateLike_sequence"/>
       <xs:element ref="tei:rs"/>
       <xs:element ref="tei:idno"/>
       <xs:group ref="tei:tei_model.persNamePart_sequence"/>
@@ -2935,6 +3004,7 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
   <xs:group name="tei_model.nameLike_sequenceOptional">
     <xs:sequence>
       <xs:group minOccurs="0" ref="tei:tei_model.nameLike.agent_sequenceOptional"/>
+      <xs:group minOccurs="0" ref="tei:tei_model.placeStateLike_sequenceOptional"/>
       <xs:element minOccurs="0" ref="tei:rs"/>
       <xs:element minOccurs="0" ref="tei:idno"/>
       <xs:group minOccurs="0" ref="tei:tei_model.persNamePart_sequenceOptional"/>
@@ -2943,6 +3013,7 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
   <xs:group name="tei_model.nameLike_sequenceOptionalRepeatable">
     <xs:sequence>
       <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.nameLike.agent_sequenceOptionalRepeatable"/>
+      <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.placeStateLike_sequenceOptionalRepeatable"/>
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:rs"/>
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:idno"/>
       <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.persNamePart_sequenceOptionalRepeatable"/>
@@ -3078,6 +3149,11 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
       <xs:element ref="tei:divGen"/>
     </xs:sequence>
   </xs:group>
+  <xs:group name="tei_model.annotationLike">
+    <xs:sequence>
+      <xs:element ref="tei:note"/>
+    </xs:sequence>
+  </xs:group>
   <xs:group name="tei_model.teiHeaderPart">
     <xs:choice>
       <xs:element ref="tei:encodingDesc"/>
@@ -3103,15 +3179,42 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
       <xs:element ref="tei:settingDesc"/>
     </xs:choice>
   </xs:group>
-  <xs:group name="tei_model.correspDescPart">
-    <xs:sequence>
+  <xs:group name="tei_model.standOffPart">
+    <xs:choice>
+      <xs:group ref="tei:tei_model.global.meta"/>
+      <xs:group ref="tei:tei_model.biblLike"/>
+      <xs:group ref="tei:tei_model.listLike"/>
+      <xs:group ref="tei:tei_model.annotationLike"/>
+      <xs:element ref="tei:seg"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="tei_model.correspActionPart">
+    <xs:choice>
+      <xs:group ref="tei:tei_model.dateLike"/>
+      <xs:group ref="tei:tei_model.addressLike"/>
+      <xs:group ref="tei:tei_model.nameLike"/>
       <xs:element ref="tei:note"/>
-    </xs:sequence>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="tei_model.correspContextPart">
+    <xs:choice>
+      <xs:group ref="tei:tei_model.ptrLike"/>
+      <xs:group ref="tei:tei_model.pLike"/>
+      <xs:element ref="tei:note"/>
+    </xs:choice>
+  </xs:group>
+  <xs:group name="tei_model.correspDescPart">
+    <xs:choice>
+      <xs:element ref="tei:note"/>
+      <xs:element ref="tei:correspAction"/>
+      <xs:element ref="tei:correspContext"/>
+    </xs:choice>
   </xs:group>
   <xs:group name="tei_model.resource">
-    <xs:sequence>
+    <xs:choice>
       <xs:element ref="tei:text"/>
-    </xs:sequence>
+      <xs:element ref="tei:standOff"/>
+    </xs:choice>
   </xs:group>
   <xs:group name="tei_model.describedResource">
     <xs:choice>
@@ -3163,6 +3266,11 @@ Sample values include: 1] duplicate; 2] duplicate-partial; 3] excessStart; 4] ex
       </xs:annotation>
     </xs:attribute>
   </xs:attributeGroup>
+  <xs:group name="tei_model.placeLike">
+    <xs:sequence>
+      <xs:element ref="tei:place"/>
+    </xs:sequence>
+  </xs:group>
   <xs:attributeGroup name="tei_att.milestoneUnit.attributes">
     <xs:attributeGroup ref="tei:tei_att.milestoneUnit.attribute.unit"/>
   </xs:attributeGroup>
@@ -5518,6 +5626,89 @@ Suggested values include: 1] ISBN; 2] ISSN; 3] DOI; 4] URI; 5] VIAF; 6] ESTC; 7]
       <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
     </xs:complexType>
   </xs:element>
+  <xs:element name="correspAction">
+    <xs:annotation>
+      <xs:documentation>(correspondence action) contains a structured description of the place, the name of a person/organization and the date related to the sending/receiving of a message or any other action related to the correspondence. [2.4.6. Correspondence Description]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice>
+        <xs:group maxOccurs="unbounded" ref="tei:tei_model.correspActionPart"/>
+        <xs:group maxOccurs="unbounded" ref="tei:tei_model.pLike"/>
+      </xs:choice>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.sortable.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.typed.attribute.subtype"/>
+      <xs:attribute name="type">
+        <xs:annotation>
+          <xs:documentation>describes the nature of the action.
+Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5] forwarded</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:union>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="sent">
+                  <xs:annotation>
+                    <xs:documentation>information concerning the sending or dispatch of a message.</xs:documentation>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="received">
+                  <xs:annotation>
+                    <xs:documentation>information concerning the receipt of a message.</xs:documentation>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="transmitted">
+                  <xs:annotation>
+                    <xs:documentation>information concerning the transmission of a message, i.e. between the dispatch and the next receipt, redirect or forwarding.</xs:documentation>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="redirected">
+                  <xs:annotation>
+                    <xs:documentation>information concerning the redirection of an unread message.</xs:documentation>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:enumeration value="forwarded">
+                  <xs:annotation>
+                    <xs:documentation>information concerning the forwarding of a message.</xs:documentation>
+                  </xs:annotation>
+                </xs:enumeration>
+              </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:pattern value="[^\p{C}\p{Z}]+"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:union>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="correspContext">
+    <xs:annotation>
+      <xs:documentation>(correspondence context) provides references to preceding or following correspondence related to this piece of correspondence. [2.4.6. Correspondence Description]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:group maxOccurs="unbounded" ref="tei:tei_model.correspContextPart"/>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="revisionDesc">
     <xs:annotation>
       <xs:documentation>(revision description) summarizes the revision history for a file. [2.6. The Revision Description 2.1.1. The TEI Header and Its Components]</xs:documentation>
@@ -6400,6 +6591,17 @@ Suggested values include: 1] label; 2] data</xs:documentation>
       </xs:complexContent>
     </xs:complexType>
   </xs:element>
+  <xs:element name="standOff">
+    <xs:annotation>
+      <xs:documentation>Functions as a container element for linked data, contextual information, and stand-off annotations embedded in a TEI document. [17.10. The standOff Container]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:group maxOccurs="unbounded" ref="tei:tei_model.standOffPart"/>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.declaring.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+    </xs:complexType>
+  </xs:element>
   <xs:attributeGroup name="tei_att.lexicographic.normalized.attributes">
     <xs:attributeGroup ref="tei:tei_att.lexicographic.normalized.attribute.norm"/>
     <xs:attributeGroup ref="tei:tei_att.lexicographic.normalized.attribute.orig"/>
@@ -6764,7 +6966,10 @@ Sample values include: 1] TEI; 2] DBK (docbook); 3] XX (unknown); 4] Schematron;
     <xs:complexType>
       <xs:choice>
         <xs:group maxOccurs="unbounded" ref="tei:tei_model.pLike"/>
-        <xs:element maxOccurs="unbounded" ref="tei:listPlace"/>
+        <xs:choice maxOccurs="unbounded">
+          <xs:group ref="tei:tei_model.placeLike"/>
+          <xs:element ref="tei:listPlace"/>
+        </xs:choice>
       </xs:choice>
       <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
       <xs:attributeGroup ref="tei:tei_att.declarable.attributes"/>
@@ -6906,33 +7111,45 @@ Sample values include: 1] TEI; 2] DBK (docbook); 3] XX (unknown); 4] Schematron;
     </xs:attribute>
   </xs:attributeGroup>
   <xs:group name="tei_model.persNamePart">
-    <xs:sequence>
+    <xs:choice>
+      <xs:element ref="tei:surname"/>
       <xs:element ref="tei:forename"/>
-    </xs:sequence>
+      <xs:element ref="tei:nameLink"/>
+    </xs:choice>
   </xs:group>
   <xs:group name="tei_model.persNamePart_alternation">
-    <xs:sequence>
+    <xs:choice>
+      <xs:element ref="tei:surname"/>
       <xs:element ref="tei:forename"/>
-    </xs:sequence>
+      <xs:element ref="tei:nameLink"/>
+    </xs:choice>
   </xs:group>
   <xs:group name="tei_model.persNamePart_sequence">
     <xs:sequence>
+      <xs:element ref="tei:surname"/>
       <xs:element ref="tei:forename"/>
+      <xs:element ref="tei:nameLink"/>
     </xs:sequence>
   </xs:group>
   <xs:group name="tei_model.persNamePart_sequenceOptional">
     <xs:sequence>
+      <xs:element minOccurs="0" ref="tei:surname"/>
       <xs:element minOccurs="0" ref="tei:forename"/>
+      <xs:element minOccurs="0" ref="tei:nameLink"/>
     </xs:sequence>
   </xs:group>
   <xs:group name="tei_model.persNamePart_sequenceOptionalRepeatable">
     <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:surname"/>
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:forename"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:nameLink"/>
     </xs:sequence>
   </xs:group>
   <xs:group name="tei_model.persNamePart_sequenceRepeatable">
     <xs:sequence>
+      <xs:element maxOccurs="unbounded" ref="tei:surname"/>
       <xs:element maxOccurs="unbounded" ref="tei:forename"/>
+      <xs:element maxOccurs="unbounded" ref="tei:nameLink"/>
     </xs:sequence>
   </xs:group>
   <xs:attributeGroup name="tei_att.datable.iso.attributes">
@@ -7039,6 +7256,21 @@ Sample values include: 1] TEI; 2] DBK (docbook); 3] XX (unknown); 4] Schematron;
       </xs:complexContent>
     </xs:complexType>
   </xs:element>
+  <xs:element name="surname">
+    <xs:annotation>
+      <xs:documentation>(surname) contains a family (inherited) name, as opposed to a given, baptismal, or nick name. [14.2.1. Personal Names]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tei:tei_macro.phraseSeq">
+          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+          <xs:attributeGroup ref="tei:tei_att.cmc.attributes"/>
+          <xs:attributeGroup ref="tei:tei_att.personal.attributes"/>
+          <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="forename">
     <xs:annotation>
       <xs:documentation>(forename) contains a forename, given or baptismal name. [14.2.1. Personal Names]</xs:documentation>
@@ -7049,6 +7281,53 @@ Sample values include: 1] TEI; 2] DBK (docbook); 3] XX (unknown); 4] Schematron;
           <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
           <xs:attributeGroup ref="tei:tei_att.cmc.attributes"/>
           <xs:attributeGroup ref="tei:tei_att.personal.attributes"/>
+          <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="nameLink">
+    <xs:annotation>
+      <xs:documentation>(name link) contains a connecting phrase or link used within a name but not regarded as part of it, such as van der or of. [14.2.1. Personal Names]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tei:tei_macro.phraseSeq">
+          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+          <xs:attributeGroup ref="tei:tei_att.cmc.attributes"/>
+          <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="placeName">
+    <xs:annotation>
+      <xs:documentation>(place name) contains an absolute or relative place name. [14.2.3. Place Names]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tei:tei_macro.phraseSeq">
+          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+          <xs:attributeGroup ref="tei:tei_att.cmc.attributes"/>
+          <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
+          <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
+          <xs:attributeGroup ref="tei:tei_att.personal.attributes"/>
+          <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="country">
+    <xs:annotation>
+      <xs:documentation>(country) contains the name of a geo-political unit, such as a nation, country, colony, or commonwealth, larger than or administratively superior to a region and smaller than a bloc. [14.2.3. Place Names]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="tei:tei_macro.phraseSeq">
+          <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+          <xs:attributeGroup ref="tei:tei_att.cmc.attributes"/>
+          <xs:attributeGroup ref="tei:tei_att.datable.attributes"/>
+          <xs:attributeGroup ref="tei:tei_att.naming.attributes"/>
           <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
         </xs:extension>
       </xs:complexContent>
@@ -7102,7 +7381,10 @@ Sample values include: 1] TEI; 2] DBK (docbook); 3] XX (unknown); 4] Schematron;
       <xs:sequence>
         <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.headLike"/>
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="tei:desc"/>
-        <xs:element maxOccurs="unbounded" ref="tei:listPlace"/>
+        <xs:choice maxOccurs="unbounded">
+          <xs:group ref="tei:tei_model.placeLike"/>
+          <xs:element ref="tei:listPlace"/>
+        </xs:choice>
       </xs:sequence>
       <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
       <xs:attributeGroup ref="tei:tei_att.cmc.attributes"/>
@@ -7123,6 +7405,7 @@ Sample values include: 1] TEI; 2] DBK (docbook); 3] XX (unknown); 4] Schematron;
           <xs:choice minOccurs="0" maxOccurs="unbounded">
             <xs:group ref="tei:tei_model.labelLike"/>
             <xs:group ref="tei:tei_model.nameLike"/>
+            <xs:group ref="tei:tei_model.placeLike"/>
             <xs:group ref="tei:tei_model.orgPart"/>
             <xs:group ref="tei:tei_model.milestoneLike"/>
           </xs:choice>
@@ -7241,6 +7524,38 @@ Sample values include: 1] TEI; 2] DBK (docbook); 3] XX (unknown); 4] Schematron;
           </xs:restriction>
         </xs:simpleType>
       </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="place">
+    <xs:annotation>
+      <xs:documentation>(place) contains data about a geographic location. [14.3.4. Places]</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.headLike"/>
+        <xs:choice>
+          <xs:group minOccurs="0" maxOccurs="unbounded" ref="tei:tei_model.pLike"/>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:group ref="tei:tei_model.labelLike"/>
+            <xs:group ref="tei:tei_model.placeStateLike"/>
+            <xs:element ref="tei:name"/>
+          </xs:choice>
+        </xs:choice>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:group ref="tei:tei_model.noteLike"/>
+          <xs:group ref="tei:tei_model.biblLike"/>
+          <xs:group ref="tei:tei_model.ptrLike"/>
+          <xs:element ref="tei:idno"/>
+        </xs:choice>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:group ref="tei:tei_model.placeLike"/>
+          <xs:element ref="tei:listPlace"/>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attributeGroup ref="tei:tei_att.global.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.editLike.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.sortable.attributes"/>
+      <xs:attributeGroup ref="tei:tei_att.typed.attributes"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="object">

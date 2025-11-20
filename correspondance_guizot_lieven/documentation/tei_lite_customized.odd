@@ -50,7 +50,7 @@ $Id$
         <bibl>TEI U5 (derived from TEI U1: An Introduction to TEI Tagging (derived from TEI ED W21:
         Living with the Guidelines)</bibl>
       </sourceDesc>
-    </fileDesc><encodingDesc><appInfo><application ident="RomaJS" version="1.3.0" when="2025-11-18T21:59:27.024Z"><desc>File edited with <ref target="https://github.com/TEIC/romajs">RomaJS</ref></desc></application></appInfo><appInfo><application ident="RomaJS" version="1.3.0" when="2025-11-19T17:01:29.901Z"><desc>File edited with <ref target="https://github.com/TEIC/romajs">RomaJS</ref></desc></application></appInfo></encodingDesc>
+    </fileDesc><encodingDesc><appInfo><application ident="RomaJS" version="1.3.0" when="2025-11-18T21:59:27.024Z"><desc>File edited with <ref target="https://github.com/TEIC/romajs">RomaJS</ref></desc></application></appInfo><appInfo><application ident="RomaJS" version="1.3.0" when="2025-11-19T17:01:29.901Z"><desc>File edited with <ref target="https://github.com/TEIC/romajs">RomaJS</ref></desc></application></appInfo><appInfo><application ident="RomaJS" version="1.3.0" when="2025-11-19T20:43:04.343Z"><desc>File edited with <ref target="https://github.com/TEIC/romajs">RomaJS</ref></desc></application></appInfo></encodingDesc>
     <revisionDesc>
       <change when="2021-02-12" who="NPC">Changed the link to the Oxford Text Archive to a currently online repository.</change>
       <change when="2014-11-19" who="MH">changing the content model
@@ -2887,10 +2887,10 @@ $Id$
         <schemaSpec ident="tei_lite" start="TEI teiCorpus" prefix="tei_" targetLang="en" docLang="en">
           <moduleRef key="tei"/>
           <moduleRef key="core" include="abbr add addrLine address author bibl biblScope choice cit corr date del desc divGen editor emph expan foreign gap gloss graphic head hi index item l label lb lg list listBibl  mentioned milestone name note num orig p pb ptr pubPlace publisher q ref reg relatedItem resp respStmt rs sic soCalled sp speaker stage teiCorpus term time title unclear"/>
-          <moduleRef key="header" include="authority availability catDesc catRef category change classCode classDecl creation distributor edition editionStmt editorialDecl encodingDesc extent fileDesc funder idno keywords langUsage language licence notesStmt principal profileDesc projectDesc publicationStmt refsDecl revisionDesc samplingDecl seriesStmt sourceDesc sponsor taxonomy teiHeader textClass titleStmt correspDesc"/>
+          <moduleRef key="header" include="authority availability catDesc catRef category change classCode classDecl creation distributor edition editionStmt editorialDecl encodingDesc extent fileDesc funder idno keywords langUsage language licence notesStmt principal profileDesc projectDesc publicationStmt refsDecl revisionDesc samplingDecl seriesStmt sourceDesc sponsor taxonomy teiHeader textClass titleStmt correspDesc correspAction correspContext"/>
           <moduleRef key="textstructure" include="TEI argument back body byline closer dateline div         docAuthor docDate docEdition docImprint docTitle         epigraph front group imprimatur opener postscript salute signed text titlePage titlePart trailer"/>
           <moduleRef key="figures" include="cell figure figDesc formula row table"/>
-          <moduleRef key="linking" include="anchor seg"/>
+          <moduleRef key="linking" include="anchor seg standOff"/>
           <moduleRef key="analysis" include="interp interpGrp pc s w"/>
           <moduleRef key="tagdocs" include="att code eg gi ident val"/>
           <!-- this version is compiled against P5 2.1 and no other, so we suppress @version  -->
@@ -3005,7 +3005,7 @@ $Id$
             </exemplum>
           </elementSpec>
         <moduleRef key="corpus" include="particDesc settingDesc"/>
-        <moduleRef key="namesdates" include="listPerson forename gender listOrg listObject listPlace object person org persName"/></schemaSpec>
+        <moduleRef key="namesdates" include="listPerson forename gender listOrg listObject listPlace object person org persName surname place placeName nameLink country"/><classRef key="model.personPart"/><classSpec ident="model.persStateLike" type="model" mode="delete"/></schemaSpec>
       </div>
     </back>
   </text>

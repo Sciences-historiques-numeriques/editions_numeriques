@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="schemas_etc/working.css" type="text/css"?>
-<?xml-model href="schemas_etc/tei_lite_customized" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<?xml-model href="schemas_etc/tei_lite_customized/document.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -28,22 +28,9 @@
          </sourceDesc>
       </fileDesc>
       <profileDesc>
-         <particDesc>            
-            <listPerson>
-               <person xml:id="ddl">
-                  <persName>
-                     <forename>Dorothée</forename>
-                     <nameLink>de
-                     </nameLink>
-                     <surname>Lieven
-                     </surname>
-                  </persName> 
-               </person>
-            </listPerson>
-         </particDesc>
          <settingDesc>
             <listPlace>
-               <place >
+                <place >
                   <placeName>Paris
                   </placeName>
                   <country>France
@@ -68,6 +55,26 @@
          </correspDesc>
       </profileDesc>
    </teiHeader>
+   <standOff>
+      <listPerson>
+         <person xml:id="ddl">
+            <persName>
+               <forename>Dorothée</forename>
+               <nameLink>de
+               </nameLink>
+               <surname>Lieven
+               </surname>
+            </persName> 
+         </person>
+         <person xml:id="frg">
+            <persName>
+               <forename>François</forename>
+               <surname>Guizot
+               </surname>
+            </persName> 
+         </person>
+      </listPerson>
+   </standOff>
    <text>
       <body>
          <div type="lettre">
