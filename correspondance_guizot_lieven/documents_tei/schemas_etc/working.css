@@ -30,6 +30,23 @@ publicationStmt:after {
     white-space: pre;
 }        
 
+licence:after {
+    content:"\a";
+    white-space: pre;
+}        
+
+
+date:after {
+    content:"\a";
+    white-space: pre;
+}        
+
+
+publisher::before {
+    display: inline;
+    content: "Editeur : ";
+}
+
 
 publisher::after {
     display: inline;
@@ -50,6 +67,17 @@ profileDesc {
 name {
     display: inline;
 }
+
+interpGrp:before {
+    content: "\a\a", "----  Interprétation";
+    display: block;
+}
+
+interp {
+    display: block;
+}
+
+
 
 
 body{

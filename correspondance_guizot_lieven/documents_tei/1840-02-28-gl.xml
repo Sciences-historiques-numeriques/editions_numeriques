@@ -67,11 +67,12 @@
             </persName> 
          </person>
          <person xml:id="frg">
-            <persName>
+            
+            <p><persName>
                <forename>François</forename>
                <surname>Guizot
                </surname>
-            </persName> 
+            </persName> </p>
          </person>
       </listPerson>
    </standOff>
@@ -107,17 +108,17 @@
             salle à manger. J’ai bien dormi. Mais la maison <pb/>est vide, la ville est vide, le pays est
             vide. Rien ne les remplira.</p>
 
-            <p>Je verrai lord Palmerston chez lui à Carlton-Terrace,
-            ce matin, à une heure. Il est possible que la reine me donne dès demain mon audience.
-            Lady Palmerston est la première personne que j’ai rencontrée dans Londres. Sa voiture a
-            passé à côté de la mienne. Nous nous sommes regardés. Elle ne m’a pas reconnu, mais moi
-            elle et le chancelier de l’ambassade que j’avais avec moi, me l’a nommée à l’instant.
-            J’irai demain soir à son samedi.</p> 
+            <p>Je verrai lord Palmerston chez lui à Carlton-Terrace, ce matin, à une heure. Il est
+            possible que la reine me donne dès demain mon audience. Lady Palmerston est la première
+            personne que j’ai rencontrée dans Londres. Sa voiture a passé à côté de la mienne. Nous
+            nous sommes regardés. Elle ne m’a pas reconnu, mais moi elle et le chancelier de
+            l’ambassade que j’avais avec moi, me l’a nommée à l’instant. J’irai demain soir à son
+            samedi.</p> 
             <p>2 heures et demie</p> 
-            <p>Je viens de chez Lord Palmerston. La Reine me recevra, à ce qu’il paraît, demain. Point de discours. M. de Talleyrand en a
-            fait un. Le général Sébastiani point. On aime mieux que je n’en fasse point. On m’a très
-            bien reçu. J’ai été de la chez lord Landsdowne et lord Melbourne que je n‘ai pas
-            trouvés.</p> 
+            <p>Je viens de chez Lord Palmerston. La Reine me recevra, à ce qu’il paraît, demain.
+            Point de discours. M. de Talleyrand en a fait un. Le général Sébastiani point. On aime
+            mieux que je n’en fasse point. On m’a très bien reçu. J’ai été de la chez lord
+            Landsdowne et lord Melbourne que je n‘ai pas trouvés.</p> 
             <p>Les bals de la Reine vont commencer. Lundi prochain, une petite soirée
             dansante. Le Prince Albert a décidément du succès. La Reine a été très bien reçue, il y
             a trois jours à Drury lane. </p>
