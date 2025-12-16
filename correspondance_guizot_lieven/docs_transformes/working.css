@@ -1,0 +1,105 @@
+
+TEI {
+    background-color: rgb(237, 238, 238);
+}
+
+teiHeader {
+    background-color: azure;
+    display: block;
+}
+
+titleStmt {
+    display: block;
+}
+title {
+    display: block;
+}
+
+title:after {
+    content: "-----\a Edition" ;
+    display: block;
+}
+
+publicationStmt {
+    display: inline;
+        }
+
+
+publicationStmt:after {
+    content:"\a";
+    white-space: pre;
+}        
+
+licence:after {
+    content:"\a";
+    white-space: pre;
+}        
+
+
+date:after {
+    content:"\a";
+    white-space: pre;
+}        
+
+
+publisher::before {
+    display: inline;
+    content: "Editeur : ";
+}
+
+
+publisher::after {
+    display: inline;
+    content: ": ";
+}
+
+sourceDesc::before {
+    content: "---- \a\a Source";
+    display: inline;
+}
+
+
+profileDesc {
+    display: none;
+}
+
+
+name {
+    display: inline;
+}
+
+interpGrp:before {
+    content: "\a\a", "----  Interprétation";
+    display: block;
+}
+
+interp {
+    display: block;
+}
+
+
+
+
+body{
+    color:#000000;
+    background-color:#eddec6;
+    margin:10pt;
+    /*padding:0;*/
+    font-family:Verdana, Tahoma, Geneva, Arial, Helvetica, sans-serif;
+    display: block;
+}
+
+p {
+    display: block;
+}
+
+name[ana="person"] {
+  width: 10px;
+  padding: 6px;
+  background-color: rgb(230, 179, 154);
+}
+
+idno {
+    color:dodgerblue;
+    display: block;
+}

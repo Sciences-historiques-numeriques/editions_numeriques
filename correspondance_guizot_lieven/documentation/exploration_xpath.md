@@ -11,10 +11,10 @@
 
 
 
-//correspDesc/correspAction/placeName[@type="sent"]
-
 ## 
 /correspDesc/correspAction[@type='sent']/placeName
+
+//correspAction[@type='sent']/persName
 
 /teiCorpus/TEI[3]/teiHeader/fileDesc/publicationStmt/availability
 

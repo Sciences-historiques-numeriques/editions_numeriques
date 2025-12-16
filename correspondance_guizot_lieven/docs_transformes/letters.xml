@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet href="schemas_etc/working.css" type="text/css"?>
+<?xml-stylesheet href="working.css" type="text/css"?>
 <?xml-model href="schemas_etc/tei_lite_customized/document.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <teiCorpus xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -27,7 +27,7 @@
    </teiHeader>
    <standOff>
       <listPerson>
-         <person xml:id="ddl">
+         <person id="ddl">
             <persName>
                <forename>Dorothée
                </forename>
@@ -37,7 +37,7 @@
                </surname>
             </persName>
          </person>
-         <person xml:id="frg">
+         <person id="frg">
             <p>
                <persName>
                   <forename>François </forename>
@@ -45,11 +45,11 @@
                </persName>
             </p>
          </person>
-         <person xml:id="palm">
+         <person id="palm">
             <name>Henry John Temple, 3rd Viscount Palmerston
             </name>
          </person>
-         <person xml:id="tall">
+         <person id="tall">
             <name>Charles-Maurice de Talleyrand-Périgord
             </name>
             <listRef type="seeAlso">
@@ -71,13 +71,13 @@
          </place>
       </listPlace>
       <interpGrp resp="#FB" type="topics">
-         <interp xml:id="DEPLAC">Déplacements </interp>
-         <interp xml:id="RENC">Rencontres </interp>
-         <interp xml:id="DESC">Descriptions </interp>
-         <interp xml:id="POLIT">Politique </interp>
+         <interp id="DEPLAC">Déplacements </interp>
+         <interp id="RENC">Rencontres </interp>
+         <interp id="DESC">Descriptions </interp>
+         <interp id="POLIT">Politique </interp>
       </interpGrp>
    </standOff>
-   <TEI xml:id="l1">
+   <TEI id="l1">
       <teiHeader>
          <fileDesc>
             <titleStmt>
@@ -209,7 +209,7 @@
          </body>
       </text>
    </TEI>
-   <TEI xml:id="l2">
+   <TEI id="l2">
       <teiHeader>
          <fileDesc>
             <titleStmt>

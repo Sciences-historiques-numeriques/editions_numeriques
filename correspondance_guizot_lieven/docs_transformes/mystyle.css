@@ -1,0 +1,24 @@
+
+
+HTML {
+    background-color: rgb(237, 238, 238);
+}
+
+h2 {
+    font-size: 110%;
+    color:rgb(78, 78, 183) 
+}
+
+h3 {
+    font-size: 90%;
+    color:rgb(64, 64, 207) 
+}
+
+a {
+    color:rgb(43, 63, 64);
+
+}
+
+li {
+        padding-top: 10px;
+}
