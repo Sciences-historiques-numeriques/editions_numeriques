@@ -1,7 +1,9 @@
 let $doc := db:get("letters")
 let $doc-corpus := $doc/teiCorpus
-let $general-title := $doc-corpus/teiHeader/fileDesc/titleStmt/title/text()
-let $file-path := '/home/francesco/kDrive/python_notebooks/sciences_historiques_numeriques/editions_numeriques/correspondance_guizot_lieven/docs_transformes/accueil.html'
+(:let $file-path := '/home/francesco/kDrive/python_notebooks/sciences_historiques_numeriques/editions_numeriques/correspondance_guizot_lieven/docs_transformes/index.html':)
+
+let $file-path := '/home/francesco/kDrive/python_notebooks/sciences_historiques_numeriques/editions_numeriques/docs/index.html'
+
 
 let $output := <html>
 <link rel="stylesheet" href="mystyle.css"/>
@@ -9,17 +11,43 @@ let $output := <html>
 <title>Guizot-Lieven</title>
 </head>
 <body>
-<h2>{$general-title}</h2>
-<br/>
-<h3>Documents de l'édition</h3>
-<ul> {
-  for $doc-tei in $doc-corpus/TEI
-  let $id := $doc-tei/@id
-  let $letter-title := $doc-tei/teiHeader/fileDesc/titleStmt/title/text()
-  
-  return <li><a href='letters.xml#{data($id)}'>{$letter-title}</a></li>
- }
-</ul>
+<h1 style="color:rgb(69, 148, 191);font-size:larger;
+                       font-weight:bold;text-align:center;
+                       margin-bottom:-25px;">Correspondance entre
+        <br />
+        François Guizot et Dorothée de
+        Lieven
+        <br />
+        (1836-1856)
+    </h1>
+    <br />
+    <br />
+
+    <div>
+        <h4>Présentation</h4>
+        <p>
+            Cette édition présente une sélection parmi les 2900 lettres échangées entre l'homme d'État français
+            François Guizot (1787-1874) et la princesse de Lieven, Dorothée van Benckendorff (1785-1857), une
+            personnalité éminente du monde diplomatique européen au cours de la première moitié du XIXe siècle.
+        </p>
+        <p>
+            L'<a href="https://eman-archives.org/Guizot-Lieven/collections/show/99">édition des 2900 lettres</a> fait
+            partie du site <a href="https://eman-archives.org/Guizot-Lieven/bienvenue-sur-le-site-guizot-pistolier"
+                style="font-style: italic;">François Guizot épistolier</a>.</p>
+    </div>
+    <br/>
+    <br/>
+    <div>
+    <h3>Documents de l'édition</h3>
+    <ul> {
+      for $doc-tei in $doc-corpus/TEI
+      let $id := $doc-tei/@id
+      let $letter-title := $doc-tei/teiHeader/fileDesc/titleStmt/title/text()
+      
+      return <li><a href='corresp_guizot_lieven/letters_ed.xml#{data($id)}'>{$letter-title}</a></li>
+     }
+    </ul>
+</div>
 </body>
 </html>
 

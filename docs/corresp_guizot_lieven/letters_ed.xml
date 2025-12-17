@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="schemas_etc/working.css" type="text/css"?>
+<?xml-model href="schemas_etc/tei_lite_customized/document.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Lettres échangées entre Dorothée de Lieven et François Guizot pendant la période
+               de l'ambassade à Londres de ce dernier (1840) </title>
+            <respStmt>
+               <resp>Mise en forme par </resp>
+               <name ref="https://orcid.org/0000-0002-4389-4126">Francesco Beretta </name>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Digital Historian </publisher>
+            <availability status="restricted">
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0">Attribution-ShareAlike
+                  4.0 International (CC BY-SA 4.0) </licence>
+            </availability>
+            <date when="2025-11">Novembre 2025 </date>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Guizot, Plate-forme EMAN : https://eman-archives.org/Guizot-Lieven </p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <standOff>
+      <listPerson>
+         <person id="ddl">
+            <persName>
+               <forename>Dorothée
+               </forename>
+               <nameLink>de
+               </nameLink>
+               <surname>Lieven
+               </surname>
+            </persName>
+         </person>
+         <person id="frg">
+            <p>
+               <persName>
+                  <forename>François </forename>
+                  <surname>Guizot </surname>
+               </persName>
+            </p>
+         </person>
+         <person id="palm">
+            <name>Henry John Temple, 3rd Viscount Palmerston
+            </name>
+         </person>
+         <person id="tall">
+            <name>Charles-Maurice de Talleyrand-Périgord
+            </name>
+            <listRef type="seeAlso">
+               <ref
+                  target="https://en.wikipedia.org/wiki/Charles_Maurice_de_Talleyrand-P%C3%A9rigord">
+                  Wikipedia
+               </ref>
+            </listRef>
+         </person>
+      </listPerson>
+      <listPlace>
+         <place>
+            <placeName>Paris </placeName>
+            <country>France </country>
+            <location>
+               <geo>48.11198, -1.67429
+               </geo>
+            </location>
+         </place>
+      </listPlace>
+      <interpGrp resp="#FB" type="topics">
+         <interp id="DEPLAC">Déplacements </interp>
+         <interp id="RENC">Rencontres </interp>
+         <interp id="DESC">Descriptions </interp>
+         <interp id="POLIT">Politique </interp>
+      </interpGrp>
+   </standOff>
+   <TEI id="l1">
+      <teiHeader>
+         <fileDesc>
+            <titleStmt>
+               <title>François Guizot à Dorothée de Lieven, Londres, vendredi 28 février 1840 </title>
+               <respStmt>
+                  <resp>Mise en forme par </resp>
+                  <name ref="https://orcid.org/0000-0002-4389-4126">Francesco Beretta </name>
+               </respStmt>
+            </titleStmt>
+            <publicationStmt>
+               <publisher>Digital Historian </publisher>
+               <availability status="restricted">
+                  <licence target="https://creativecommons.org/licenses/by-sa/4.0">Attribution-ShareAlike
+                     4.0 International (CC BY-SA 4.0) </licence>
+               </availability>
+               <date when="2025-11">Novembre 2025 </date>
+            </publicationStmt>
+            <sourceDesc>
+               <p>Guizot, François (1787-1874), 317. Londres, Vendredi 28 février 1840, François
+                  Guizot à Dorothée de Lieven, 1840-02-28. Marie Dupond &amp; Association François
+                  Guizot, projet EMAN (Thalim, CNRS-ENS-Sorbonne nouvelle). Consulté le 18/11/2025
+                  sur la plate-forme EMAN : https://eman-archives.org/Guizot-Lieven/items/show/6 </p>
+            </sourceDesc>
+         </fileDesc>
+         <profileDesc>
+            <correspDesc>
+               <correspAction type="sent">
+                  <persName ref="#frg">François Guizot </persName>
+                  <placeName>Londres </placeName>
+                  <date when="1840-02-28">28 février 1840 </date>
+               </correspAction>
+               <correspAction type="received">
+                  <persName ref="#ddl">Dorothée de Lieven </persName>
+                  <placeName>Paris </placeName>
+               </correspAction>
+            </correspDesc>
+         </profileDesc>
+      </teiHeader>
+      <text>
+         <body>
+            <div type="lettre">
+               <opener>
+                  <idno type="id_number">317 </idno>
+                  <dateline>
+                     <name type="place">Londres </name> Vendredi <date when="1840-02-28">28 février
+                  1840 </date>, 9 heures </dateline>
+               </opener>
+               <p>Je me lève. <seg ana="#DEPLAC">Je suis arrivé hier à 5 heures un quart. J’ai mis
+                  un peu plus de huit heures de Douvres à Londres </seg> par un beau soleil froid
+                  qui est entré avec moi dans le brouillard de la ville et s’y est éteint tout à
+                  coup. J’espère que je n’en ferai pas autant. </p>
+               <p>La Londres que j’ai traversée m’a paru plus belle que je ne m’y attendais, les
+                  maisons moins petites, l’aspect plus monumental. Mais quelle monotonie grise !
+                  C’est du jour sans lumière. </p>
+
+               <p>En débarquant à Douvres, j’ai trouvé l’Angleterre différente, très différente de
+                  la France, pays, villes, personnes, rues, tout. Après deux heures de voyage,
+                  l’impression avait disparu, je me trouvais chez moi. Au fond, c’est la même
+                  civilisation, et les ressemblances surpassent les différences. </p>
+
+               <p>
+                  <seg ana="#DESC">Hertford-House est très beau, le rez-de-chaussée surtout. Le
+                  premier étage est mal meublé.</seg> J’y suis établi dans une bonne chambre sur la
+                  cour, au dessus du salon qui précède mon cabinet du rez-de-chaussée et dont on a
+                  fait une petite salle à manger. J’ai bien dormi. Mai la maison <pb /> est vide, la
+                  ville est vide, le pays est vide. Rien ne les remplira. </p>
+               <p>Je verrai lord Palmerston chez lui à Carlton-Terrace, ce matin, à une heure. Il
+                  est possible que la reine me donne dès demain mon audience. Lady Palmerston est la
+                  première personne que j’ai rencontrée dans Londres. Sa voiture a passé à côté de
+                  la mienne. Nous nous sommes regardés. Elle ne m’a pas reconnu, mais moi elle et le
+                  chancelier de l’ambassade que j’avais avec moi, me l’a nommée à l’instant. J’irai
+                  demain soir à son samedi. </p>
+               <p>2 heures et demie </p>
+               <p>Je viens de chez <name ref="#palm">Lord Palmerston </name>. La Reine me recevra, à
+                  ce qu’il paraît, demain. Point de discours. M. de Talleyrand en a fait un. Le
+                  général Sébastiani point. On aime mieux que je n’en fasse point. On m’a très bien
+                  reçu. J’ai été de la chez lord Landsdowne et lord Melbourne que je n‘ai pas
+                  trouvés. </p>
+               <p>Les bals de la Reine vont commencer. Lundi prochain, une petite soirée dansante.
+                  Le Prince Albert a décidément du succès. La Reine a été très bien reçue, il y a
+                  trois jours à Drury lane. </p>
+               <p>M. de Bülow arrive demain. </p>
+               <p>Ellice est venu en mon absence. J’y ai regret. Alava <pb /> m’a écrit de grand
+                  matin, désolé de ne pouvoir venir à la place de son billet. Il est cloué dans son
+                  fauteuil par un lumbago. </p>
+               <p> Je viens de parcourir tout le beau quartier. Tout est petit et l’ensemble est
+                  grand, très grand. Une chose me choque, c’est la manie des ornements dans toutes
+                  ces petites maisons. Je n’ai vu nulle part tant de colonnes, de colonnettes, de
+                  figurines, d’enjolivement de toute espèce. Ce qui est charmant et point exagéré du
+                  tout dans votre dire, c’est la propreté ou pour mieux dire l’éclat des carreaux de
+                  vitre, des portes de tout ce qui paraît. À ce degré la propreté devient de
+                  l’élégance qui donne bonne opinion des gens et se passe de bon goût. </p>
+               <p>Voilà une invitation qui m’arrive de lord et lady Palmerston à dîner pour demain
+                  samedi, avec de duc de Sussex. </p>
+               <p>Seriez-vous assez bonne pour faire venir le petit [luc] dont je n’ai pas
+                  l’adresse, et l’engager à porter chez ma mère, s’il en a encore au même prix, ou à
+                  peu près, un service de [nappage] de Saxe pour 24 couverts pareil au premier, et
+                  deux ou trois services, moins beaux pour 12 couverts. Je vois que je ne trouverai
+                  rien ici à si bon marché ; et je crois me rappeler qu’il a dit à ma mère qu’il en
+                  avait encore. Ma maison est fort loin d’être montée. Je suffis aux premières
+                  nécessités. Ce sera cher, même resserré dans le simple convenable. Je veux dire le
+                  premier établissement ; je ne sais pas encore ce que sera le service courant ;
+                  mais j’entrevois qu’il n’aura rien d’excessif. </p>
+               <p>
+                  <seg ana="#POLIT">Le vote d’hier soir préoccupe un peu mais plus de préoccupation
+                  que de conséquences. Je n’ai encore rencontré personne qui pensât sérieusement à
+                  la possibilité d’une autre administration. </seg>
+               </p>
+               <p>Je vous parle bien à tors et à travers, de tout pêle mêle et sans rien dire. J’ai
+                  sur l’esprit comme sur le cœur le poids de cet Océan qui nous sépare. Mes lettres
+                  de ce matin me disent qu’il n’y a toujours rien. Quand en aurai-je de vous ?
+                  Demain, j’espère. Adieu. Dites-moi tout ce qui vous occupe ou vous ennuie. Je
+                  voudrais vous suivre dans toutes vos heures. Triste, triste effort. </p>
+               <closer>
+                  <salute>Adieu. Adieu. </salute>
+                  <signed>
+                     <choice>
+                        <abbr>G. </abbr>
+                        <expan>Guizot </expan>
+                     </choice>
+                  </signed>
+               </closer>
+               <postscript>
+                  <label>P.S. </label>
+                  <p>Le <rs type="person">fils de M. de Nesselrode </rs> vient d’arriver en courrier
+                     de <name type="place">St Pétersbourg </name>. </p>
+               </postscript>
+            </div>
+         </body>
+      </text>
+   </TEI>
+   <TEI id="l2">
+      <teiHeader>
+         <fileDesc>
+            <titleStmt>
+               <title>Dorothée de Lieven à François Guizot, Paris, premier mars 1840 </title>
+               <respStmt>
+                  <resp>Mise en forme par </resp>
+                  <name ref="https://orcid.org/0000-0002-4389-4126">Francesco Beretta </name>
+               </respStmt>
+            </titleStmt>
+            <publicationStmt>
+               <publisher>Digital Historian </publisher>
+               <availability status="restricted">
+                  <licence target="https://creativecommons.org/licenses/by-sa/4.0">Attribution-ShareAlike
+                     4.0 International (CC BY-SA 4.0) </licence>
+               </availability>
+               <date when="2025-12">Décembre 2025 </date>
+            </publicationStmt>
+            <sourceDesc>
+               <p>Guizot, François (1787-1874), 317. Londres, Vendredi 28 février 1840, François
+                  Guizot à Dorothée de Lieven, 1840-02-28. Marie Dupond &amp; Association François
+                  Guizot, projet EMAN (Thalim, CNRS-ENS-Sorbonne nouvelle). Consulté le 18/11/2025
+                  sur la plate-forme EMAN : https://eman-archives.org/Guizot-Lieven/items/show/6 </p>
+            </sourceDesc>
+         </fileDesc>
+         <profileDesc>
+            <correspDesc>
+               <correspAction type="sent">
+                  <persName ref="#ddl">Dorothée de Lieven </persName>
+                  <placeName>Paris</placeName>
+                  <date when="1840-03-01">1er mars 1840</date>
+               </correspAction>
+               <correspAction type="received">
+                  <persName ref="#frg">François Guizot </persName>
+                  <placeName>Londres</placeName>
+               </correspAction>
+            </correspDesc>
+         </profileDesc>
+      </teiHeader>
+      <text>
+         <body>
+            <div type="lettre">
+               <opener>
+                  <idno type="id_number">318 </idno>
+                  <dateline>
+                     <name type="place">Paris, </name> le <date from-iso="1840-03-01">1er mars 1840</date>,
+                  dimanche 10 heures </dateline>
+               </opener>
+               <p>Après avoir fermé ma lettre hier, je suis allée chez votre mère. Le cœur m’a battu
+                  en entrant. Elle m’a reçue avec bonté. Vous ne sauriez croire comme elle me plaît.
+                  C’est un visage si serein, un regard si intelligent et si doux, et même gai. </p>
+               <p> Je l’ai beaucoup regardée. Quand je ne la regardais pas, il me semble qu’elle me
+                  regardait aussi. Le Duc de Broglie y était, et y est resté. Il a parlé de la
+                  situation tout le temps. Pourquoi le Duc de Broglie a-t-il cet air moqueur et
+                  désobligeant ? Je conçois qu’il ne plaise pas. Moi, je l’aime assez malgré cela,
+                  et malgré autre chose que je déteste et que j’ai découvert en lui hier. Il a
+                  commencé par dire qu’il ne savait absolument rien ; que depuis trois jours il
+                  n’avait vu personne du tout ; et puis il nous a raconté son entretien avec le Roi,
+                  la veille, et un long entretien avec Thiers le soir, et puis, et puis, tout ce qui
+                  se passe. Pourquoi commencer par mentir ? Vous savez l’horreur que j’ai de cela.
+                  Si jamais je commence, moi, je continuerai. Mais il me semble que je suis trop
+                  fière pour commencer. Les Français ont décidément l’habitude du mensonge ; je ne
+                  connais pas d’Anglais dans lequel j’aie surpris ce défaut. Voyez bien et vous
+                  trouverez si je dis vrai! </p>
+               <p>Mais je reviens à la rue de la Ville-l’Evêque. Vos enfants ont couru à ma
+                  rencontre dans la cour, cela m’a fait plaisir. Ils ont une mine excellente,
+                  surtout Henriette. J’ai demandé à votre mère de me les envoyer ce matin pour voir
+                  passer le bœuf gras, elle ne le veut pas à cause de leur deuil. Votre mère a été
+                  bien polie et affectueuse pour moi.</p>
+
+               <p>Delà je fus chez Lady Granville qui est bien malade ; elle n’avait pas dîné ni
+                  assisté à la soirée la veille. Nous avons causé pendant une heure, elle et son
+                  mari, du nouveau ministère, de votre situation ; il ne sait trop qu’en dire. Moi,
+                  je ne me permets pas d’avoir une opinion devant les autres ; j’attends que vous
+                  ayez pris votre parti. </p>
+               <p>J’ai été rendre visite à Mad. Sebastiani sans la trouver. De là chez les Appony
+                  qui sont consternés. Appony ne conçoit pas le Roi, et il ajoute qu’il n’aura
+                  certainement aucune affaire à traiter avec Thiers, et qu’il entre en conséquence
+                  en vacances. </p>
+               <p>J’ai dîné seule. Le soir la diplomatie est venue. Granville croyait savoir que la
+                  nomination du ministère avait été mal accueillie à la Chambre. Médem est enchanté
+                  de n’avoir plus Soult et d’avoir Thiers. Il est tout remonté. Brignoles n’a pas
+                  d’opinion. </p>
+               <p>Quand aurai-je mes lettres ? à propos notre correspondance ! Cela ne sera plus
+                  très commode. Cela prouve bien votre situation naturelle vis-à-vis de ce
+                  ministère. </p>
+               <p>Bulwer est très malade, je ne puis pas le voir. Il m’écrit ce matin ce matin et me
+                  dit qu’Odillon Barot est très piqué contre Thiers qui ne l’aurait pas même
+                  consulté pendant la crise. Cela n’est pas trop d’accord avec d’autres avis. </p>
+               <p>Midi</p>
+
+               <p>Génie sort d’ici, il a un peu ébranlé mes opinions d’hier, par les récits qu’il
+                  m’a faits de ses entretiens avec vos amis. Il faut attendre ; mais si on tire à
+                  gauche, revenir sur le champ : voilà ce qui me paraît ressortir des avis les plus
+                  sages. En attendant, la puissance de Thiers me paraît établie dans tous les
+                  départements du Ministère. </p>
+               <p>J’attends votre lettre , car on me dit qu’il y a un gros paquet au bureau de
+                  l’hôtel des Capucines.</p>
+
+               <p>1 heure </p>
+               <p>La lettre n’arrive pas. La voilà. Je vous en remercie. </p>
+               <p>Lundi 2 mars, I heure </p>
+               <p>Je ne sais pas trop comment vous envoyer cette lettre. Cependant, jusqu’à nouvel
+                  avis, je ferai comme vous me l’avez indiqué. Lundi et jeudi au bureau des Affaires
+                  étrangères et samedi par la poste.</p> <p>J’ai été voir hier les trois malades, la
+                  petite Princesse, Lady
+                     Granville et Mad. Appony. Même fureur chez ceux-ci. Il veut aller au château ce
+                  soir. </p>
+               <p>J’ai eu à dîner M. de Pogenpohl. Ah! mon Dieu, Dimanche passé c’était autre chose!
+                  Le soir j’ai été faire visite à Mad. de Castellane; mais quoique j’aie tenu bon
+                  jusqu’à onze heures, M. Molé n’y est pas venu, je le regrette. Mad. de Castellane
+                  est fort opposition. En bonne catholique, elle a une sainte terreur de M. Vivien.
+                  Outre ces faits là, je n’ai rien relevé dans sa conversation. </p>
+               <p>
+                  <name ref="#palm">Lord Palmerston</name> mande à Lord Granville que dimanche il
+                  devait avoir un long entretien avec vous. Vous voilà lancé dans les affaires, les
+                  dîners et les fêtes. Je crains que, pour commencer, le Duc de Sussex ne vous ait
+                  fait longtemps rester à table. Je vois tout cela, et un peu tout ce que vous en
+                  pensez. Votre première impression de Londres m’a divertie. Elle est vraie; je
+                  n’oublierai pas vos colonnettes et vos figurines. </p>
+               <p>J’ai fait venir mon petit brigand et l’ai envoyé chez votre mère avec des nappes
+                  de Saxe. Elle choisira ; il a tout ce que vous demandez. Les services ordinaires
+                  pour 12 personnes, étonnamment bon marché, 129 francs. </p>
+               <p>Je n’ai de lettres de personne. </p>
+               <p>Le temps est toujours brillant et froid. Ceci ne me plait pas ? Je crains la
+                  grippe des ambassadeurs. Je ne marche pas.Adieu, il me semble que je vous ai tout
+                  dit, tout ce que peut porter une lettre. J’aurais mieux dit à la chaise verte. Ah!
+                  que cette chambre est vide!</p>
+               <closer>
+                  <salute>Adieu. Adieu. </salute>
+
+               </closer>
+
+            </div>
+         </body>
+      </text>
+   </TEI>
+</teiCorpus>
