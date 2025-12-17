@@ -6,14 +6,12 @@ let $file-path := '/home/francesco/kDrive/python_notebooks/sciences_historiques_
 
 
 let $output := <html>
-<link rel="stylesheet" href="mystyle.css"/>
+<link rel="stylesheet" href="corresp_guizot_lieven/mystyle.css"/>
 <head>
 <title>Guizot-Lieven</title>
 </head>
 <body>
-<h1 style="color:rgb(69, 148, 191);font-size:larger;
-                       font-weight:bold;text-align:center;
-                       margin-bottom:-25px;">Correspondance entre
+<h1>Correspondance entre
         <br />
         François Guizot et Dorothée de
         Lieven
@@ -48,6 +46,12 @@ let $output := <html>
      }
     </ul>
 </div>
+<div>
+<h3>Index
+</h3>
+<ul>
+<li>Table des noms</li>
+<li><a href="table_matieres.html">Table des matières</a></li></ul></div>
 </body>
 </html>
 

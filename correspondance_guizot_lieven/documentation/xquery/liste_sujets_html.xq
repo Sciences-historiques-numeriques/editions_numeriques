@@ -5,7 +5,7 @@
 <body>
 <table>
 {
-let $doc := db:get("letters_1", "letters")
+let $doc := db:get("letters")
 for $tei-doc in $doc/teiCorpus/TEI
 let $iso-date := $tei-doc//correspAction[@type="sent"]/date/@when
 (:return <tr><td>{data($iso-date)}</td></tr>:)

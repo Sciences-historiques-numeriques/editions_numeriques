@@ -125,7 +125,7 @@
                      <name type="place">Londres </name> Vendredi <date when="1840-02-28">28 février
                   1840 </date>, 9 heures </dateline>
                </opener>
-               <p>Je me lève. <seg ana="#DEPLAC">Je suis arrivé hier à 5 heures un quart. J’ai mis
+               <p>Je me lève. <seg xml:id="s4" ana="#DEPLAC">Je suis arrivé hier à 5 heures un quart. J’ai mis
                   un peu plus de huit heures de Douvres à Londres </seg> par un beau soleil froid
                   qui est entré avec moi dans le brouillard de la ville et s’y est éteint tout à
                   coup. J’espère que je n’en ferai pas autant. </p>
@@ -139,7 +139,7 @@
                   civilisation, et les ressemblances surpassent les différences. </p>
 
                <p>
-                  <seg ana="#DESC">Hertford-House est très beau, le rez-de-chaussée surtout. Le
+                  <seg xml:id="s5" ana="#DESC">Hertford-House est très beau, le rez-de-chaussée surtout. Le
                   premier étage est mal meublé.</seg> J’y suis établi dans une bonne chambre sur la
                   cour, au dessus du salon qui précède mon cabinet du rez-de-chaussée et dont on a
                   fait une petite salle à manger. J’ai bien dormi. Mai la maison <pb /> est vide, la
@@ -182,7 +182,7 @@
                   premier établissement ; je ne sais pas encore ce que sera le service courant ;
                   mais j’entrevois qu’il n’aura rien d’excessif. </p>
                <p>
-                  <seg ana="#POLIT">Le vote d’hier soir préoccupe un peu mais plus de préoccupation
+                  <seg xml:id="s6" ana="#POLIT">Le vote d’hier soir préoccupe un peu mais plus de préoccupation
                   que de conséquences. Je n’ai encore rencontré personne qui pensât sérieusement à
                   la possibilité d’une autre administration. </seg>
                </p>
@@ -257,12 +257,12 @@
                      <name type="place">Paris, </name> le <date from-iso="1840-03-01">1er mars 1840</date>,
                   dimanche 10 heures </dateline>
                </opener>
-               <p>Après avoir fermé ma lettre hier, je suis allée chez votre mère. Le cœur m’a battu
-                  en entrant. Elle m’a reçue avec bonté. Vous ne sauriez croire comme elle me plaît.
+               <p><seg xml:id="s1" ana="#RENC">Après avoir fermé ma lettre hier, je suis allée chez votre mère. Le cœur m’a battu
+                  en entrant. Elle m’a reçue avec bonté</seg>. Vous ne sauriez croire comme elle me plaît.
                   C’est un visage si serein, un regard si intelligent et si doux, et même gai. </p>
                <p> Je l’ai beaucoup regardée. Quand je ne la regardais pas, il me semble qu’elle me
-                  regardait aussi. Le Duc de Broglie y était, et y est resté. Il a parlé de la
-                  situation tout le temps. Pourquoi le Duc de Broglie a-t-il cet air moqueur et
+                  regardait aussi. <seg xml:id="s3" ana="#RENC">Le Duc de Broglie y était, et y est resté. Il a parlé de la
+                  situation tout le temps</seg>. Pourquoi le Duc de Broglie a-t-il cet air moqueur et
                   désobligeant ? Je conçois qu’il ne plaise pas. Moi, je l’aime assez malgré cela,
                   et malgré autre chose que je déteste et que j’ai découvert en lui hier. Il a
                   commencé par dire qu’il ne savait absolument rien ; que depuis trois jours il
@@ -323,12 +323,11 @@
                   est fort opposition. En bonne catholique, elle a une sainte terreur de M. Vivien.
                   Outre ces faits là, je n’ai rien relevé dans sa conversation. </p>
                <p>
-                  <name ref="#palm">Lord Palmerston</name> mande à Lord Granville que dimanche il
-                  devait avoir un long entretien avec vous. Vous voilà lancé dans les affaires, les
-                  dîners et les fêtes. Je crains que, pour commencer, le Duc de Sussex ne vous ait
-                  fait longtemps rester à table. Je vois tout cela, et un peu tout ce que vous en
-                  pensez. Votre première impression de Londres m’a divertie. Elle est vraie; je
-                  n’oublierai pas vos colonnettes et vos figurines. </p>
+                  <seg xml:id="s2" ana="#POLIT"><name ref="#palm">Lord Palmerston</name> mande à Lord Granville que dimanche il devait avoir un long entretien avec vous</seg>. Vous voilà lancé dans les affaires, les dîners et les fêtes. Je crains que, pour
+                  commencer, le Duc de Sussex ne vous ait fait longtemps rester à table. Je vois
+                  tout cela, et un peu tout ce que vous en pensez. Votre première impression de
+                  Londres m’a divertie. Elle est vraie; je n’oublierai pas vos colonnettes et vos
+                  figurines. </p>
                <p>J’ai fait venir mon petit brigand et l’ai envoyé chez votre mère avec des nappes
                   de Saxe. Elle choisira ; il a tout ce que vous demandez. Les services ordinaires
                   pour 12 personnes, étonnamment bon marché, 129 francs. </p>

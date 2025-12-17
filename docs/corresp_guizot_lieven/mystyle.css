@@ -1,0 +1,30 @@
+
+
+body {
+    background-color: rgb(221, 229, 238);
+}
+
+h1 {
+    color:rgb(57, 143, 196);
+    font-size:larger;                        font-weight:bold;text-align:center;
+    margin-bottom:-25px;
+}
+
+h2 {
+    font-size: 110%;
+    color:rgb(144, 144, 200) 
+}
+
+h3 {
+    font-size: 90%;
+    color:rgb(64, 64, 207) 
+}
+
+a {
+    color:rgb(43, 63, 64);
+
+}
+
+li {
+        padding-top: 10px;
+}
