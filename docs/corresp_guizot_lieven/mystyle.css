@@ -28,3 +28,7 @@ a {
 li {
         padding-top: 10px;
 }
+
+:target {
+    background-color: #ffa;
+}
