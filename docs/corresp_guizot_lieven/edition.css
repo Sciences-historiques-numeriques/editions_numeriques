@@ -1,0 +1,55 @@
+
+
+body {
+    background-color: rgb(173, 193, 216);
+}
+
+h1 {
+    color:#7f0a17; ;
+    font-size:larger;                        font-weight:bold;text-align:center;
+    margin-bottom:-25px;
+}
+
+h2 {
+    font-size: 105%;
+    color:#6f1620; 
+}
+
+h3 {
+    font-size: 90%;
+    color:#8e2532;
+    padding-top: 10px;
+}
+
+a {
+    color:rgb(43, 63, 64);
+
+}
+
+li {
+        padding-top: 5px;
+}
+
+:target {
+    background-color: rgb(196, 231, 238);
+    border: 1px solid blue;
+    
+}
+
+p.editeur {
+    text-align: center;
+    font-size: large;    
+    padding: 5px;
+  
+}
+
+title{
+
+    text-align: center;
+    font-size: larger;
+    display: block;
+    padding: 5px;
+    margin-left: 10%;
+    margin-right: 10%;
+
+}

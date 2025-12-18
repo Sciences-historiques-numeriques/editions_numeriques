@@ -1,3 +1,4 @@
+(: Fichier qui expérimente la transformation de TEI vers HTML  :)
 <html>
 <head>
 <title>Page Title</title>

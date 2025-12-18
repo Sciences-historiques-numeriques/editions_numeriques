@@ -6,7 +6,7 @@ let $file-path := '/home/francesco/kDrive/python_notebooks/sciences_historiques_
 
 
 let $output := <html>
-<link rel="stylesheet" href="corresp_guizot_lieven/mystyle.css"/>
+<link rel="stylesheet" href="corresp_guizot_lieven/edition.css"/>
 <head>
 <title>Guizot-Lieven</title>
 </head>
@@ -40,9 +40,12 @@ let $output := <html>
     <ul> {
       for $doc-tei in $doc-corpus/TEI
       let $id := $doc-tei/@id
+      let $doc-date := $doc-tei/teiHeader/profileDesc/correspDesc/correspAction[@type = "sent"]/date
       let $letter-title := $doc-tei/teiHeader/fileDesc/titleStmt/title/text()
+      (: tri par ordre de edate même si les lettres étaient dans un autre ordre:)
+      order by $doc-date/@when
       
-      return <li><a href='corresp_guizot_lieven/letters_ed.xml#{data($id)}'>{$letter-title}</a></li>
+      return <li><a href='corresp_guizot_lieven/letters.html#{data($id)}'>{$letter-title}</a></li>
      }
     </ul>
 </div>
