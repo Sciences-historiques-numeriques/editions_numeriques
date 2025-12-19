@@ -13,6 +13,7 @@ h1 {
 h2 {
     font-size: 105%;
     color:#6f1620; 
+    padding-top: 15px;
 }
 
 h3 {
@@ -31,15 +32,16 @@ li {
 }
 
 :target {
-    background-color: rgb(196, 231, 238);
-    border: 1px solid blue;
-    
+    background-color: rgb(218, 236, 239);
+    border:  thin solid rgb(69, 69, 183);
 }
 
 p.editeur {
     text-align: center;
     font-size: large;    
-    padding: 5px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+  
   
 }
 
@@ -52,4 +54,9 @@ title{
     margin-left: 10%;
     margin-right: 10%;
 
+}
+
+
+name {
+    color: rgb(77, 74, 213);
 }
