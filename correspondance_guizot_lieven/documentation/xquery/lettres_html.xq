@@ -1,9 +1,12 @@
-let $file-path := '/home/francesco/kDrive/python_notebooks/sciences_historiques_numeriques/editions_numeriques/docs/corresp_guizot_lieven/letters.html'
+import module namespace loc = 'http://local-module.org' at "./local_functions.xq";
 
-let $doc := db:get("letters")
-let $doc-corpus := $doc/teiCorpus
-let $edition-title := $doc-corpus/teiHeader/fileDesc/titleStmt/title
-let $editeur := $doc-corpus/teiHeader/fileDesc/titleStmt/respStmt
+let $file-path := '/home/francesco/kDrive/python_notebooks/sciences_historiques_numeriques/editions_numeriques/docs/corresp_guizot_lieven/letters.html'
+let $doc := loc:copy-replace(/*)
+
+
+
+let $edition-title := $doc/teiHeader/fileDesc/titleStmt/title
+let $editeur := $doc/teiHeader/fileDesc/titleStmt/respStmt
 
 let $output := 
 <html xml:lang="en" lang="en">
@@ -21,7 +24,7 @@ let $output :=
     <br />
 
     {      
-        for $TEI in $doc-corpus/TEI
+        for $TEI in $doc/TEI
         
         let $title := $TEI/teiHeader/fileDesc/titleStmt/title
         let $text := $TEI/text
@@ -39,4 +42,5 @@ let $output :=
 </body>
 </html>
 
-return file:write($file-path, $output)
+return file:write($file-path, $output)  
+(: return $output :)
