@@ -1,7 +1,12 @@
-import module namespace loc = 'http://local-module.org' at "./local_functions.xq";
+import module namespace local = 'http://local-module.org' at "./local_functions.xq";
+
+let $db := db:get('letters', 'letters.xml')
 
 let $file-path := '/home/francesco/kDrive/python_notebooks/sciences_historiques_numeriques/editions_numeriques/docs/corresp_guizot_lieven/letters.html'
-let $doc := loc:copy-replace(/*)
+(: the [1] at the end eliminates the final counter output, 
+gets juste the XML :)
+let $doc-with-id  := local:copy-with-ids($db/*, 1, false())[1]
+let $doc := local:copy-replace($doc-with-id)
 
 
 
@@ -31,9 +36,11 @@ let $output :=
         let $date := $TEI/teiHeader/profileDesc/correspDesc/correspAction[@type = "sent"]/date/@when
         
         order by $date  
-        return <div>
+
+        (: letter_date est un attribut non HTML et ad hoc pour conserver la date de la lettre au format ISO :)
+        return <div class="root" letter-date="{$date}">
         
-        <h2 id="{$TEI/@id}">{data($title)}</h2>
+        <h2 id="{$TEI/@id}" >{data($title)}</h2>
         {$text}
         </div>
         
@@ -42,5 +49,6 @@ let $output :=
 </body>
 </html>
 
-return file:write($file-path, $output)  
+
+return ( file:write($file-path, $output), db:put('letters', $output, 'letters_html.xml')  )
 (: return $output :)

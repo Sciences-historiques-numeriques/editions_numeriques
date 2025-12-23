@@ -61,21 +61,14 @@
          </person>
       </listPerson>
       <listPlace>
-         <place xml:id="paris">
-            <placeName>Paris</placeName>
+         <place>
+            <placeName>Paris </placeName>
             <country>France </country>
             <location>
                <geo>48.11198, -1.67429
                </geo>
             </location>
          </place>
-         <place xml:id="londres">
-            <placeName>Londres</placeName>
-         </place>
-         <place xml:id="dover">
-            <placeName>Dover</placeName>
-         </place>
-         <place xml:id="saintPetsbg"><placeName>Saint Petersburg</placeName></place>
       </listPlace>
       <interpGrp resp="#FB" type="topics">
          <interp xml:id="DEPLAC">Déplacements </interp>
@@ -84,7 +77,7 @@
          <interp xml:id="POLIT">Politique </interp>
       </interpGrp>
    </standOff>
-   <TEI n="l2">
+   <TEI xml:id="l2">
       <teiHeader>
          <fileDesc>
             <titleStmt>
@@ -129,15 +122,15 @@
                <opener>
                   <idno type="id_number">318 </idno>
                   <dateline>
-                     <name ref="#paris" type="place">Paris, </name> le <date when="1840-03-01">1er mars 1840</date>,
+                     <name type="place">Paris, </name> le <date when="1840-03-01">1er mars 1840</date>,
                   dimanche 10 heures </dateline>
                </opener>
-               <p><seg ana="#RENC">Après avoir fermé ma lettre hier, je suis allée chez
+               <p><seg xml:id="s1" ana="#RENC">Après avoir fermé ma lettre hier, je suis allée chez
                   votre mère. Le cœur m’a battu en entrant. Elle m’a reçue avec bonté</seg>. Vous ne
                   sauriez croire comme elle me plaît. C’est un visage si serein, un regard si
                   intelligent et si doux, et même gai. </p>
                <p> Je l’ai beaucoup regardée. Quand je ne la regardais pas, il me semble qu’elle me
-                  regardait aussi. <seg ana="#RENC">Le Duc de Broglie y était, et y est
+                  regardait aussi. <seg xml:id="s3" ana="#RENC">Le Duc de Broglie y était, et y est
                   resté. Il a parlé de la situation tout le temps</seg>. Pourquoi le Duc de Broglie
                   a-t-il cet air moqueur et désobligeant ? Je conçois qu’il ne plaise pas. Moi, je
                   l’aime assez malgré cela, et malgré autre chose que je déteste et que j’ai
@@ -197,12 +190,12 @@
                   est fort opposition. En bonne catholique, elle a une sainte terreur de M. Vivien.
                   Outre ces faits là, je n’ai rien relevé dans sa conversation. </p>
                <p>
-                  <seg ana="#POLIT"><name ref="#palm">Lord Palmerston</name> mande à
+                  <seg xml:id="s2" ana="#POLIT"><name ref="#palm">Lord Palmerston</name> mande à
                   Lord Granville que dimanche il devait avoir un long entretien avec vous</seg>.
                   Vous voilà lancé dans les affaires, les dîners et les fêtes. Je crains que, pour
                   commencer, le Duc de Sussex ne vous ait fait longtemps rester à table. Je vois
                   tout cela, et un peu tout ce que vous en pensez. Votre première impression de
-                  <name type="place" ref="#londres">Londres</name> m’a divertie. Elle est vraie; je n’oublierai pas vos colonnettes et vos
+                  Londres m’a divertie. Elle est vraie; je n’oublierai pas vos colonnettes et vos
                   figurines. </p>
                <p>J’ai fait venir mon petit brigand et l’ai envoyé chez votre mère avec des nappes
                   de Saxe. Elle choisira ; il a tout ce que vous demandez. Les services ordinaires
@@ -221,7 +214,7 @@
          </body>
       </text>
    </TEI>
-   <TEI n="l1">
+   <TEI xml:id="l1">
       <teiHeader>
          <fileDesc>
             <titleStmt>
@@ -269,7 +262,7 @@
                      <name type="place">Londres </name> Vendredi <date when="1840-02-28">28 février
                   1840 </date>, 9 heures </dateline>
                </opener>
-               <p>Je me lève. <seg ana="#DEPLAC">Je suis arrivé hier à 5 heures un quart. J’ai mis
+               <p>Je me lève. <seg xml:id="s4" ana="#DEPLAC">Je suis arrivé hier à 5 heures un quart. J’ai mis
                   un peu plus de huit heures de Douvres à Londres </seg> par un beau soleil froid
                   qui est entré avec moi dans le brouillard de la ville et s’y est éteint tout à
                   coup. J’espère que je n’en ferai pas autant. </p>
@@ -277,13 +270,13 @@
                   maisons moins petites, l’aspect plus monumental. Mais quelle monotonie grise !
                   C’est du jour sans lumière. </p>
 
-               <p>En débarquant à <name type="place" ref="#dover">Douvres</name>, j’ai trouvé l’Angleterre différente, très différente de
+               <p>En débarquant à Douvres, j’ai trouvé l’Angleterre différente, très différente de
                   la France, pays, villes, personnes, rues, tout. Après deux heures de voyage,
                   l’impression avait disparu, je me trouvais chez moi. Au fond, c’est la même
                   civilisation, et les ressemblances surpassent les différences. </p>
 
                <p>
-                  <seg ana="#DESC">Hertford-House est très beau, le rez-de-chaussée surtout. Le
+                  <seg xml:id="s5" ana="#DESC">Hertford-House est très beau, le rez-de-chaussée surtout. Le
                   premier étage est mal meublé.</seg> J’y suis établi dans une bonne chambre sur la
                   cour, au dessus du salon qui précède mon cabinet du rez-de-chaussée et dont on a
                   fait une petite salle à manger. J’ai bien dormi. Mai la maison <pb /> est vide, la
@@ -326,7 +319,7 @@
                   premier établissement ; je ne sais pas encore ce que sera le service courant ;
                   mais j’entrevois qu’il n’aura rien d’excessif. </p>
                <p>
-                  <seg ana="#POLIT">Le vote d’hier soir préoccupe un peu mais plus de préoccupation
+                  <seg xml:id="s6" ana="#POLIT">Le vote d’hier soir préoccupe un peu mais plus de préoccupation
                   que de conséquences. Je n’ai encore rencontré personne qui pensât sérieusement à
                   la possibilité d’une autre administration. </seg>
                </p>
@@ -347,7 +340,7 @@
                <postscript>
                   <label>P.S. </label>
                   <p>Le <rs type="person">fils de M. de Nesselrode </rs> vient d’arriver en courrier
-                     de <name type="place" ref="#saintPetsbg">St Pétersbourg </name>. </p>
+                     de <name type="place">St Pétersbourg </name>. </p>
                </postscript>
             </div>
          </body>
