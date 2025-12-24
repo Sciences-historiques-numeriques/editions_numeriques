@@ -28,29 +28,18 @@
    <standOff>
       <listPerson>
          <person xml:id="ddl">
-            <persName>
-               <forename>Dorothée
-               </forename>
-               <nameLink>de
-               </nameLink>
-               <surname>Lieven
-               </surname>
-            </persName>
+            <p><name>Dorothée de Lieven</name></p>            
          </person>
          <person xml:id="frg">
             <p>
-               <persName>
-                  <forename>François </forename>
-                  <surname>Guizot </surname>
-               </persName>
+               <name>François Guizot</name>               
             </p>
          </person>
          <person xml:id="palm">
-            <name>Henry John Temple, 3rd Viscount Palmerston
-            </name>
+            <p><name>Henry John Temple, 3rd Viscount Palmerston</name></p>
          </person>
          <person xml:id="tall">
-            <name>Charles-Maurice de Talleyrand-Périgord
+            <p><name>Charles-Maurice de Talleyrand-Périgord
             </name>
             <listRef type="seeAlso">
                <ref
@@ -58,6 +47,7 @@
                   Wikipedia
                </ref>
             </listRef>
+            </p>
          </person>
       </listPerson>
       <listPlace>
@@ -197,7 +187,7 @@
                   est fort opposition. En bonne catholique, elle a une sainte terreur de M. Vivien.
                   Outre ces faits là, je n’ai rien relevé dans sa conversation. </p>
                <p>
-                  <seg ana="#POLIT"><name ref="#palm">Lord Palmerston</name> mande à
+                  <seg ana="#POLIT"><name type="person" ref="#palm">Lord Palmerston</name> mande à
                   Lord Granville que dimanche il devait avoir un long entretien avec vous</seg>.
                   Vous voilà lancé dans les affaires, les dîners et les fêtes. Je crains que, pour
                   commencer, le Duc de Sussex ne vous ait fait longtemps rester à table. Je vois
@@ -295,8 +285,8 @@
                   chancelier de l’ambassade que j’avais avec moi, me l’a nommée à l’instant. J’irai
                   demain soir à son samedi. </p>
                <p>2 heures et demie </p>
-               <p>Je viens de chez <name ref="#palm">Lord Palmerston </name>. La Reine me recevra, à
-                  ce qu’il paraît, demain. Point de discours. M. de Talleyrand en a fait un. Le
+               <p>Je viens de chez <name type="person" ref="#palm">Lord Palmerston </name>. La Reine me recevra, à
+                  ce qu’il paraît, demain. Point de discours. <name type="person" ref="#tall">M. de Talleyrand</name> en a fait un. Le
                   général Sébastiani point. On aime mieux que je n’en fasse point. On m’a très bien
                   reçu. J’ai été de la chez lord Landsdowne et lord Melbourne que je n‘ai pas
                   trouvés. </p>

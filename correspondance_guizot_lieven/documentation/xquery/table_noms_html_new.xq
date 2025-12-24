@@ -3,9 +3,10 @@ tout en les regroupant par type:)
 
 let $file-path := '/home/francesco/kDrive/python_notebooks/sciences_historiques_numeriques/editions_numeriques/docs/corresp_guizot_lieven/table_noms.html'
 
-let $doc-corpus := db:get('letters',"letters.xml")/teiCorpus
+let $doc-corpus := db:get('letters',"letters")/teiCorpus
 let $doc-html := db:get('letters', 'letters_html.xml')
-let $interpGroup := $doc-corpus/standOff/interpGrp
+let $listPerson := $doc-corpus/standOff/listPerson
+let $listPlace := $doc-corpus/standOff/listPlace
 
 
 let $output := 
@@ -16,33 +17,33 @@ let $output :=
 </head>
 <body>
 <h1>
-    Table des matières de la correspondance de<br />
+    Table des noms de la correspondance de<br />
     François Guizot et Dorothée de Lieven<br />
     (1836-1856)
     </h1>
     <br />
     <br />
    <div>
-    <h2>Segments annotés</h2>    
+    <h2>Personnes</h2>    
     {      
-        for $interp in $interpGroup/interp    
-        let $interp_id := $interp/@id
+        for $person in $listPerson/person    
+        let $person_id := $person/@id
           
-        return <div><h3>{data($interp)}</h3> 
+        return <div><h3>{data($person/p/name)}</h3> 
         
         <ul>{
-            for $seg in $doc-html//seg        
-            let $seg_ana := $seg/@ana
-            let $seg_id := $seg/@id
+            for $person in $doc-html//name[@type='person']        
+            let $person_ref := $person/@ref
+            let $seg_id := $person/@id
             (: récupère la date de chaque segment en remontant dans l'arbre:)
-            let $root-div := $seg/ancestor::div[@class='root']
+            let $root-div := $person/ancestor::div[@class='root']
             let $seg-date := $root-div/@letter-date
             
             order by $seg-date
             
                              
-            where $interp_id = substring-after($seg_ana, '#')
-          return <li><a href="letters.html#{data($seg_id)}">{data($seg)}</a> ({data($seg-date)})</li>
+            where $person_id = substring-after($person_ref, '#')
+          return <li><a href="letters.html#{data($seg_id)}">{data($person), data($person_ref)}</a> ({data($seg-date)})</li>
           }</ul>
         </div>
             
@@ -54,4 +55,4 @@ let $output :=
 </body>
 </html>
 
-return file:write($file-path, $output)
+return ($output, file:write($file-path, $output))

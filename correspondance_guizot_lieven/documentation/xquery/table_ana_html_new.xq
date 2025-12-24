@@ -3,7 +3,7 @@ tout en les regroupant par type:)
 
 let $file-path := '/home/francesco/kDrive/python_notebooks/sciences_historiques_numeriques/editions_numeriques/docs/corresp_guizot_lieven/table_matieres.html'
 
-let $doc-corpus := db:get('letters',"letters.xml")/teiCorpus
+let $doc-corpus := db:get('letters',"letters")/teiCorpus
 let $doc-html := db:get('letters', 'letters_html.xml')
 let $interpGroup := $doc-corpus/standOff/interpGrp
 

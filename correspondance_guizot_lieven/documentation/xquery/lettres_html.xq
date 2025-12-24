@@ -1,6 +1,6 @@
 import module namespace local = 'http://local-module.org' at "./local_functions.xq";
 
-let $db := db:get('letters', 'letters.xml')
+let $db := db:get('letters', 'letters')
 
 let $file-path := '/home/francesco/kDrive/python_notebooks/sciences_historiques_numeriques/editions_numeriques/docs/corresp_guizot_lieven/letters.html'
 (: the [1] at the end eliminates the final counter output, 
