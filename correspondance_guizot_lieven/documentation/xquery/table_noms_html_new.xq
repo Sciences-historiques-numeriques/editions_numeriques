@@ -29,10 +29,10 @@ let $output :=
         for $person in $listPerson/person    
         let $person_id := $person/@id
           
-        return <div><h3>{data($person/p/name)}</h3> 
+        return <div><h3 id="{$person_id}">{data($person/p/name)}</h3> 
         
         <ul>{
-            for $person in $doc-html//name[@type='person']        
+            for $person in $doc-html//a[@type='person']        
             let $person_ref := $person/@ref
             let $seg_id := $person/@id
             (: récupère la date de chaque segment en remontant dans l'arbre:)
@@ -43,7 +43,7 @@ let $output :=
             
                              
             where $person_id = substring-after($person_ref, '#')
-          return <li><a href="letters.html#{data($seg_id)}">{data($person), data($person_ref)}</a> ({data($seg-date)})</li>
+          return <li><a href="letters.html#{data($seg_id)}">{data($person)}</a> ({data($seg-date)})</li>
           }</ul>
         </div>
             

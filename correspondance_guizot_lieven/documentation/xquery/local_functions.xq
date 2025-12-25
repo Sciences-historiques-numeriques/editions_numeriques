@@ -7,7 +7,8 @@ module namespace local = 'http://local-module.org';
 
 declare function local:copy-replace($element as element()) as element() {
   if ($element/self::name)
-  then <a class="name" href="table_noms.html{data($element/@ref)}">{data($element)}</a>
+  (: On ajoute des attributs du texte original, non admis en HTML mais utiles:)
+  then <a class="name" id="{$element/@id}" type="{$element/@type}" ref="{$element/@ref}" href="table_noms.html{data($element/@ref)}">{data($element)}</a>
   else element {node-name($element)}
                {$element/@*,
                 for $child in $element/node()
