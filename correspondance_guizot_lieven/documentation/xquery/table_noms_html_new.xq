@@ -47,10 +47,34 @@ let $output :=
           }</ul>
         </div>
             
-    }
-              
+    }     
+</div>
+<br/>
+   <div>
+    <h2>Lieux</h2>    
+    {      
+        for $place in $listPlace/place    
+        let $place_id := $place/@id
+          
+        return <div><h3 id="{$place_id}">{data($place/placeName)}</h3> 
         
-     
+        <ul>{
+            for $place in $doc-html//a[@type='place']        
+            let $place_ref := $place/@ref
+            let $seg_id := $place/@id
+            (: récupère la date de chaque segment en remontant dans l'arbre:)
+            let $root-div := $place/ancestor::div[@class='root']
+            let $seg-date := $root-div/@letter-date
+            
+            order by $seg-date
+            
+                             
+            where $place_id = substring-after($place_ref, '#')
+          return <li><a href="letters.html#{data($seg_id)}">{data($place)}</a> ({data($seg-date)})</li>
+          }</ul>
+        </div>
+            
+    }     
 </div>
 </body>
 </html>
