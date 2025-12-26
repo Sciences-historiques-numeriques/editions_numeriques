@@ -22,7 +22,8 @@ let $output :=
     </h1>
     <br />
     <br />
-   <div>
+     <p style="font-size: small;"><a href="../index.html">Retour à l'accueil</a></p>
+    <div>
     <h2>Segments annotés</h2>    
     {      
         for $interp in $interpGroup/interp    

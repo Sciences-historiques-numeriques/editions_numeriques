@@ -23,6 +23,7 @@ let $output :=
     </h1>
     <br />
     <br />
+    <p style="font-size: small;"><a href="../index.html">Retour à l'accueil</a></p>
    <div>
     <h2>Personnes</h2>    
     {      
